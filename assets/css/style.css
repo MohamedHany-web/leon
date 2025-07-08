@@ -1,0 +1,162 @@
+/*Start Global Styles*/
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/*End Global Styles*/
+
+/*Start Header Style*/
+
+.header .container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .logo img {
+  width: 60px;
+}
+.header .container .navbar {
+  position: relative;
+}
+.header .container .navbar ul {
+  list-style: none;
+  display: none;
+  transition: all var(--main-duration) ease-in-out;
+}
+.header .container .navbar ul::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--section-background) transparent;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .container .navbar ul li {
+  padding: 10px 20px;
+  background-color: var(--section-background);
+  border-bottom: 1px solid #ddd;
+}
+.header .container .navbar ul li a {
+  width: 100%;
+  color: black;
+  transition: var(--main-duration);
+}
+.header .container .navbar .menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.header .navbar .menu-icon span {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+.header .navbar .menu-icon span:nth-child(2) {
+  width: 15px;
+  transition: all var(--main-duration) ease-in;
+  align-self: end;
+}
+.header .container .navbar:hover .menu-icon span:nth-child(2) {
+  width: 25px;
+}
+.header .container .navbar:hover ul {
+  position: absolute;
+  top: 185%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+.header .container .navbar ul li a:hover {
+  padding-left: 15px;
+}
+/*End Header Style*/
+
+/*Start landing style*/
+
+.hero {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 40px);
+}
+.hero .container {
+  position: relative;
+  height: 100%;
+}
+.hero .container .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.hero .container .overlay-text h1 {
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.hero .container .overlay-text p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+/*End landing style*/
