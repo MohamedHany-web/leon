@@ -87,11 +87,11 @@ a {
   transform: translateX(-50%);
 }
 .header .container .navbar ul li {
-  padding: 10px 20px;
   background-color: var(--section-background);
   border-bottom: 1px solid #ddd;
 }
 .header .container .navbar ul li a {
+  padding: 10px 20px;
   width: 100%;
   color: black;
   transition: var(--main-duration);
@@ -123,9 +123,10 @@ a {
   display: flex;
   flex-direction: column;
   width: 160px;
+  z-index: 88;
 }
 .header .container .navbar ul li a:hover {
-  padding-left: 15px;
+  padding-left: 35px;
 }
 /*End Header Style*/
 
@@ -134,7 +135,7 @@ a {
 .hero {
   background-image: url(../images/landing.jpg);
   background-size: cover;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 68px);
 }
 .hero .container {
   position: relative;
@@ -160,3 +161,43 @@ a {
   margin-top: 20px;
 }
 /*End landing style*/
+
+/*Start features section*/
+
+.features {
+  background-color: #f6f6f6;
+  padding: var(--section-padding) 0;
+}
+.features .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.features .container .item {
+  text-align: center;
+  width: 300px;
+}
+.features .container .item i {
+  color: var(--main-color);
+  font-size: 40px;
+}
+.features .container .item h3 {
+  margin: 20px 0;
+}
+.features .container .item p {
+  color: #777;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .features .container {
+    justify-content: center;
+    row-gap: 30px;
+  }
+}
+
+/*End features section*/
