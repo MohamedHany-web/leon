@@ -406,3 +406,34 @@ a {
   }
 }
 /*End about section*/
+
+/*Start contact section*/
+.contact {
+  padding: var(--section-padding) 0;
+  background-color: var(--section-background);
+}
+.contact .container .contact-content {
+  padding: 60px;
+  text-align: center;
+  margin-top: 50px;
+}
+.contact .container .contact-content p:first-of-type {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+.contact .container .contact-content a {
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-color);
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+.contact .container .contact-content p:last-of-type {
+  font-size: 18px;
+  font-weight: 400;
+}
+/*End contact section*/
