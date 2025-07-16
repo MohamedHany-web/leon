@@ -217,12 +217,13 @@ a {
 /* Start services section */
 
 .services {
-  padding: var(--section-background) 0;
+  padding: var(--section-padding) 0;
 }
 
 .services .container .items {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 3fr 1fr; */
+  display: flex;
   gap: 15px;
   margin-top: 60px;
 }
@@ -231,6 +232,7 @@ a {
 }
 .services .container .right-items {
   position: relative;
+  flex-basis: 20%;
 }
 .services .container .right-items::after {
   content: "";
@@ -243,15 +245,20 @@ a {
   z-index: -1;
 }
 .services .container .items .left-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  row-gap: 38px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
 }
 .services .container .items .left-items .item {
   display: flex;
+  column-gap: 15px;
+  flex-basis: calc(100% / 2 - 28px);
 }
 .services .container .items .left-items i {
   color: var(--main-color);
+  display: block;
   flex-basis: 100px;
 }
 .services .container .items .left-items h4 {
@@ -263,7 +270,6 @@ a {
   font-weight: 300;
   line-height: 1.6;
 }
-
 @media (max-width: 992px) {
   .services .right-items {
     display: none;
@@ -275,4 +281,52 @@ a {
     column-gap: 20px;
   }
 }
+@media (max-width: 768px) {
+  .services .container .items .left-items {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .services .container .items .left-items .item {
+    flex-basis: content;
+  }
+}
 /* End services section */
+
+/*Start porfolio section*/
+.portfolio {
+  padding: var(--section-padding) 0;
+  background-color: var(--section-background);
+}
+.portfolio .container .items {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.portfolio .container .items .item {
+  flex-basis: calc(100% / 3 - 17px);
+  background-color: #fff;
+}
+.portfolio .container .items .item .item-image img {
+  max-width: 100%;
+}
+.portfolio .container .items .item .item-content {
+  padding: 26px;
+}
+.portfolio .container .items .item .item-content p {
+  margin-top: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+@media (max-width: 991px) {
+  .portfolio .container .items .item {
+    flex-basis: calc(100% / 2 - 15px);
+  }
+}
+@media (max-width: 768px) {
+  .portfolio .container .items {
+    /* flex-basis: calc(100% / 2 - 15px); */
+    flex-direction: column;
+  }
+}
+/*End porfolio section*/
