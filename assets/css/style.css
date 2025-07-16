@@ -442,6 +442,24 @@ a {
   font-size: 18px;
   font-weight: 400;
 }
+
+@media (max-width: 768px) {
+  .contact .container .contact-content p,
+  .contact .container .contact-content a {
+    font-size: 20px !important;
+  }
+  .contact .container .contact-content p:first-of-type {
+    letter-spacing: 0;
+  }
+  .contact .container .contact-content p:last-of-type {
+    font-size: 16px !important;
+    letter-spacing: -1px;
+  }
+  .section-heading {
+    font-size: 60px !important;
+  }
+}
+
 /*End contact section*/
 
 /*Start footer*/
